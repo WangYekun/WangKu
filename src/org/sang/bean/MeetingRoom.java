@@ -7,6 +7,7 @@ public class MeetingRoom {
     private int roomid;
     private int roomnum;
     private String roomname;
+    // 会议房间容量
     private int capacity;
     private int status;
     private String description;

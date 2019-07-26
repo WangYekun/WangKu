@@ -12,6 +12,9 @@ import java.io.IOException;
  * Created by sang on 2017/8/17.
  */
 public class AddDepServlet extends HttpServlet {
+    /**
+     * 添加部门
+     */
     private DepartmentService departmentService = new DepartmentService();
 
     @Override

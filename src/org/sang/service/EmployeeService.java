@@ -28,7 +28,8 @@ public class EmployeeService {
     }
 
     public int login(String username, String password) {
-        int result = 3;//表示登录失败
+        //表示登录失败
+        int result = 3;
         Employee loginEmp = employeeDao.login(username, password);
         if (loginEmp == null) {
             return result;

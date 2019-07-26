@@ -38,7 +38,7 @@ public class DepartmentDao {
         PreparedStatement ps = null;
         try {
             con = DBUtils.getConnection();
-            ps = con.prepareStatement("insert into department (departmentname) values (?);");
+            ps = con.prepareStatement("INSERT INTO department (departmentname) VALUES (?);");
             ps.setString(1, name);
             return ps.executeUpdate();
         } catch (ClassNotFoundException e) {
@@ -78,7 +78,7 @@ public class DepartmentDao {
         ResultSet rs = null;
         try {
             con = DBUtils.getConnection();
-            ps = con.prepareStatement("select * from department;");
+            ps = con.prepareStatement("SELECT * FROM department;");
             rs = ps.executeQuery();
             while (rs.next()) {
                 list.add(new Department(rs.getInt("departmentid"), rs.getString("departmentname")));

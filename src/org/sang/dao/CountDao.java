@@ -15,10 +15,11 @@ public class CountDao {
         ResultSet rs = null;
         try {
             con = DBUtils.getConnection();
-            ps = con.prepareStatement("SELECT * from counter");
+            ps = con.prepareStatement("SELECT * FROM counter");
             rs = ps.executeQuery();
-            if (rs.next())
+            if (rs.next()) {
                 return rs.getInt(1);
+            }
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         } catch (SQLException e) {

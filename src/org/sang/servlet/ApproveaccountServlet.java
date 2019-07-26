@@ -21,6 +21,14 @@ public class ApproveaccountServlet extends HttpServlet {
         doPost(req, resp);
     }
 
+    /**
+     * @param req  请求数据
+     * @param resp 相应数据
+     * @throws ServletException 抛出异常
+     * @throws IOException      抛出异常
+     *                          <p>
+     *                          使用service层中的getUnApproveaccount();进行人数的统计
+     */
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         List<Employee> list = employeeService.getUnApproveaccount();

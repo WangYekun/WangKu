@@ -10,15 +10,18 @@ public class Meeting {
     private String meetingname;
     private int roomid;
     private int reservationistid;
+    // 参加人数
     private int numberofparticipants;
     private Timestamp starttime;
     private Timestamp endtime;
+    // 预约时间
     private Timestamp reservationtime;
     private Timestamp canceledtime;
     private String description;
     private int status;
     private String roomname;
     private String empname;
+    // 取消会议原因
     private String canceledreason;
 
     public String getCanceledreason() {
